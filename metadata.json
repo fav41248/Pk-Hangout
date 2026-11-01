@@ -1,0 +1,6 @@
+{
+  "name": "Pastors' Kids Hangout 2026",
+  "description": "An authentic community retreat and gathering for pastors' kids in Ibadan, Nigeria. Features live countdown, honest conversations board, past moments gallery, schedule, and registration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
