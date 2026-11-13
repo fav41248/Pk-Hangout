@@ -27,22 +27,28 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 The Experience
               </button>
               <button
-                onClick={() => { onNavigate('moments'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                onClick={() => onNavigate('themes')}
+                className="text-left text-[#e4beb6] hover:text-[#dfe2f1] transition-colors cursor-pointer"
+              >
+                Colour Groups &amp; Associations
+              </button>
+              <button
+                onClick={() => onNavigate('moments')}
                 className="text-left text-[#e4beb6] hover:text-[#dfe2f1] transition-colors cursor-pointer"
               >
                 Past Editions Archive
               </button>
               <button
-                onClick={() => { onNavigate('faq'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                onClick={() => onNavigate('faq')}
                 className="text-left text-[#e4beb6] hover:text-[#dfe2f1] transition-colors cursor-pointer"
               >
                 Frequently Asked Questions
               </button>
               <button
-                onClick={() => { onNavigate('register'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                onClick={() => onNavigate('register')}
                 className="text-left text-[#ff5733] font-bold hover:underline transition-colors cursor-pointer"
               >
-                Reserve Seat (Dec 26)
+                Reserve Seat (Dec 26 · Ages 11+)
               </button>
             </div>
           </div>
@@ -59,13 +65,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
               <div className="flex items-center gap-2.5">
                 <span className="material-symbols-outlined text-[#ff5733] text-lg">mail</span>
-                <a href="mailto:fellowship@pkhangout.ng" className="text-[#e4beb6] hover:text-[#ffb4a4] transition-colors">
-                  fellowship@pkhangout.ng
+                <a href="mailto:pcfibadan@gmail.com" className="text-[#e4beb6] hover:text-[#ffb4a4] transition-colors">
+                  pcfibadan@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <span className="material-symbols-outlined text-[#ff5733] text-lg">call</span>
-                <span className="text-[#e4beb6]">+234 (0) 800 PK HANGOUT</span>
+                <a href="tel:08130462855" className="text-[#e4beb6] hover:text-[#ffb4a4] transition-colors">
+                  08130462855
+                </a>
               </div>
             </div>
           </div>

@@ -1,4 +1,16 @@
-export type Screen = 'experience' | 'conversations' | 'moments' | 'details' | 'faq' | 'register';
+export type Screen = 'experience' | 'themes' | 'conversations' | 'moments' | 'details' | 'faq' | 'register';
+
+export interface AssociationGroup {
+  id: string;
+  groupNumber: string;
+  colorName: string;
+  dressHint: string;
+  swatchHex: string;
+  surfaceTint: string;
+  borderTint: string;
+  textAccent: string;
+  associations: string[];
+}
 
 export interface TopicRoom {
   id: string;

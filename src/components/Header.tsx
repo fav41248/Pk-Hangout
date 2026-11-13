@@ -13,6 +13,7 @@ export const Header: React.FC<HeaderProps> = ({ currentScreen, onNavigate, regis
 
   const navLinks: { screen: Screen; label: string }[] = [
     { screen: 'experience', label: 'The Experience' },
+    { screen: 'themes', label: 'Colour Groups' },
     { screen: 'moments', label: 'Past Editions' },
     { screen: 'faq', label: 'FAQs' },
   ];
@@ -20,7 +21,9 @@ export const Header: React.FC<HeaderProps> = ({ currentScreen, onNavigate, regis
   const handleLinkClick = (screen: Screen) => {
     onNavigate(screen);
     setMobileMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (screen === 'experience') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (

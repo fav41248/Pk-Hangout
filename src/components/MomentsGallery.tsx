@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { GALLERY_ITEMS } from '../data/eventData';
 import { GalleryItem } from '../types';
 
 export const MomentsGallery: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'hangout-1' | 'hangout-2'>('all');
+  const [showAllMixed, setShowAllMixed] = useState(false);
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
+  const mixedItems = useMemo(() => {
+    const hangout1 = GALLERY_ITEMS.filter((item) => item.category === 'hangout-1');
+    const hangout2 = GALLERY_ITEMS.filter((item) => item.category === 'hangout-2');
+    const mixed: GalleryItem[] = [];
+    const maxLen = Math.max(hangout1.length, hangout2.length);
+
+    for (let i = 0; i < maxLen; i++) {
+      if (hangout2[i]) mixed.push(hangout2[i]);
+      if (hangout1[i]) mixed.push(hangout1[i]);
+    }
+    return mixed;
+  }, []);
+
   const filteredItems = activeFilter === 'all'
-    ? GALLERY_ITEMS
+    ? mixedItems
     : GALLERY_ITEMS.filter((item) => item.category === activeFilter);
+
+  const displayedItems = activeFilter === 'all' && !showAllMixed
+    ? filteredItems.slice(0, 4)
+    : filteredItems;
 
   const filters = [
     { key: 'all', label: 'View All' },
@@ -18,16 +36,16 @@ export const MomentsGallery: React.FC = () => {
 
   const handleNext = () => {
     if (!selectedItem) return;
-    const currentIndex = filteredItems.findIndex((it) => it.id === selectedItem.id);
-    const nextIndex = (currentIndex + 1) % filteredItems.length;
-    setSelectedItem(filteredItems[nextIndex]);
+    const currentIndex = displayedItems.findIndex((it) => it.id === selectedItem.id);
+    const nextIndex = (currentIndex + 1) % displayedItems.length;
+    setSelectedItem(displayedItems[nextIndex]);
   };
 
   const handlePrev = () => {
     if (!selectedItem) return;
-    const currentIndex = filteredItems.findIndex((it) => it.id === selectedItem.id);
-    const prevIndex = (currentIndex - 1 + filteredItems.length) % filteredItems.length;
-    setSelectedItem(filteredItems[prevIndex]);
+    const currentIndex = displayedItems.findIndex((it) => it.id === selectedItem.id);
+    const prevIndex = (currentIndex - 1 + displayedItems.length) % displayedItems.length;
+    setSelectedItem(displayedItems[prevIndex]);
   };
 
   return (
@@ -55,7 +73,10 @@ export const MomentsGallery: React.FC = () => {
               return (
                 <button
                   key={f.key}
-                  onClick={() => setActiveFilter(f.key)}
+                  onClick={() => {
+                    setActiveFilter(f.key);
+                    if (f.key === 'all') setShowAllMixed(false);
+                  }}
                   className={`px-4 py-2 rounded-full font-label-caps text-label-caps uppercase transition-all cursor-pointer ${
                     isActive
                       ? 'bg-[#ff5733] text-white shadow-md'
@@ -71,7 +92,7 @@ export const MomentsGallery: React.FC = () => {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
+          {displayedItems.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
@@ -87,6 +108,20 @@ export const MomentsGallery: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* View All Button after initial 4 mixed images */}
+        {activeFilter === 'all' && !showAllMixed && filteredItems.length > 4 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAllMixed(true)}
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#ff5733] text-white font-label-caps text-sm font-bold uppercase tracking-wider shadow-[0_10px_28px_rgba(255,87,51,0.28)] hover:bg-[#ff6b4a] transition-colors cursor-pointer whitespace-nowrap"
+            >
+              <span>View All</span>
+              <span className="material-symbols-outlined text-lg">expand_more</span>
+            </button>
+          </div>
+        )}
 
       </div>
 

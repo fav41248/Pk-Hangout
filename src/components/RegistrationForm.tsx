@@ -35,12 +35,21 @@ export const RegistrationForm: React.FC = () => {
             Click below to secure your spot, reserve your meal pack, and get verified for the Ibadan Baptist Conference Pastors' Kids Hangout.
           </p>
 
-          <div className="pt-4 w-full max-w-md">
+          {/* Clear Age & Venue Eligibility Line */}
+          <div className="w-full max-w-md border-t border-b border-[#353944]/40 py-3.5 px-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-[#dfe2f1]">
+            <span className="font-semibold text-[#ffb95f]">Open to Ages 11 &amp; Above Only</span>
+            <span aria-hidden="true" className="text-[#ab8982]">·</span>
+            <span className="text-[#e4beb6]">Baptist House, Ibadan</span>
+            <span aria-hidden="true" className="text-[#ab8982]">·</span>
+            <span className="text-[#e4beb6]">Free Entry</span>
+          </div>
+
+          <div className="pt-2 w-full max-w-md">
             <a
               href={REGISTRATION_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-4 px-8 rounded-xl bg-[#ff5733] text-white font-label-caps text-body-md font-bold uppercase tracking-wider shadow-[0_12px_32px_rgba(255,87,51,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer inline-block"
+              className="w-full py-4 px-8 rounded-xl bg-[#ff5733] text-white font-label-caps text-body-md font-bold uppercase tracking-wider shadow-[0_12px_32px_rgba(255,87,51,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>COUNT ME IN</span>
               <span className="material-symbols-outlined text-lg">arrow_forward</span>

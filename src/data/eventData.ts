@@ -1,4 +1,4 @@
-import { TopicRoom, GalleryItem, ScheduleItem, FaqItem, PKThought } from '../types';
+import { TopicRoom, GalleryItem, ScheduleItem, FaqItem, PKThought, AssociationGroup } from '../types';
 
 export const REGISTRATION_FORM_URL = "https://luma.com/ed9hzn5a?tk=omBWN8";
 
@@ -185,6 +185,86 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     imageUrl: '/assets/aistudio/IMG_7870_5c68328a.jpg',
     altText: 'Vibrant energy and joyful interaction among attendees at Hangout 2.0.',
     description: 'Celebrating community, faith, and joy in a relaxed, zero-pretense environment.'
+  },
+  {
+    id: 'moment-h1-1',
+    title: 'Opening Mic & Welcome Session',
+    subtitle: 'Main Hall · Ibadan',
+    category: 'hangout-1',
+    edition: 'Pk’s Hangout 1.0',
+    imageUrl: '/assets/aistudio/IMG_0171_ea5a787e.jpg',
+    altText: 'Speaker addressing attendees with a microphone during Hangout 1.0.',
+    description: 'Kicking off the inaugural Pastors’ Kids Hangout 1.0 with warm welcomes and honest reflections.'
+  },
+  {
+    id: 'moment-h1-2',
+    title: 'Christmas Jam & Worship Trio',
+    subtitle: 'Stage Spotlight · Ibadan',
+    category: 'hangout-1',
+    edition: 'Pk’s Hangout 1.0',
+    imageUrl: '/assets/aistudio/IMG_0189_57850cf7.jpg',
+    altText: 'Three young vocalists singing together on stage during Hangout 1.0.',
+    description: 'Vibrant Boxing Day harmonies and live vocal performances by fellow PKs.'
+  },
+  {
+    id: 'moment-h1-3',
+    title: 'Team Trivia & Table Games',
+    subtitle: 'Activity Tables · Ibadan',
+    category: 'hangout-1',
+    edition: 'Pk’s Hangout 1.0',
+    imageUrl: '/assets/aistudio/IMG_0200_f2c5683a.jpg',
+    altText: 'Three attendees huddled around a notebook writing answers together at Hangout 1.0.',
+    description: 'Putting heads together during group games and fast-paced team challenges.'
+  },
+  {
+    id: 'moment-h1-4',
+    title: 'Front-Row Reactions & Smiles',
+    subtitle: 'Fellowship Hall · Ibadan',
+    category: 'hangout-1',
+    edition: 'Pk’s Hangout 1.0',
+    imageUrl: '/assets/aistudio/IMG_0243_13d94feb.jpg',
+    altText: 'Row of engaged Pastors Kids seated together listening and smiling at Hangout 1.0.',
+    description: 'Captivated faces as candid stories and shared experiences unfolded on stage.'
+  },
+  {
+    id: 'moment-h1-5',
+    title: 'Heart-to-Heart Keynote Moment',
+    subtitle: 'Main Hall · Ibadan',
+    category: 'hangout-1',
+    edition: 'Pk’s Hangout 1.0',
+    imageUrl: '/assets/aistudio/IMG_0305_6bca5a23.jpg',
+    altText: 'Speaker holding a microphone sharing a message with attendees at Hangout 1.0.',
+    description: 'Speaking straight from the heart about identity, purpose, and navigating expectations.'
+  },
+  {
+    id: 'moment-h1-6',
+    title: 'Cup-Stacking Challenge Victory',
+    subtitle: 'Games Arena · Ibadan',
+    category: 'hangout-1',
+    edition: 'Pk’s Hangout 1.0',
+    imageUrl: '/assets/aistudio/IMG_0377_9cc3aaed.jpg',
+    altText: 'Cheerful attendees raising their hands in celebration during a cup-stacking game at Hangout 1.0.',
+    description: 'Hands in the air and pure excitement during the Hangout 1.0 table games showdown.'
+  },
+  {
+    id: 'moment-h1-7',
+    title: 'Laughter Across the Aisles',
+    subtitle: 'Seating Rows · Ibadan',
+    category: 'hangout-1',
+    edition: 'Pk’s Hangout 1.0',
+    imageUrl: '/assets/aistudio/IMG_0513_c92e6071.jpg',
+    altText: 'Friends seated together sharing lighthearted conversation at Hangout 1.0.',
+    description: 'Making brand-new friendships and catching up with fellow PKs from across Ibadan.'
+  },
+  {
+    id: 'moment-h1-8',
+    title: 'Full House at Hangout 1.0',
+    subtitle: 'Auditorium Wide · Ibadan',
+    category: 'hangout-1',
+    edition: 'Pk’s Hangout 1.0',
+    imageUrl: '/assets/aistudio/IMG_0543_91a42e27.jpg',
+    altText: 'Wide view of the packed hall filled with Pastors Kids during Hangout 1.0.',
+    description: 'A wide snapshot of the historic first gathering that sparked a lasting community.'
   }
 ];
 
@@ -248,39 +328,117 @@ export const SCHEDULE_ITEMS: ScheduleItem[] = [
 export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-1',
-    question: "Who is the Pastors' Kids Hangout for?",
-    answer: "This gathering is exclusively designed for children of pastors and ministers within the Ibadan Baptist Conference (and affiliated fellow PK friends)",
+    question: "Who is the Pastors' Kids Hangout for, and what is the age limit?",
+    answer: "This gathering is exclusively designed for children of pastors and ministers aged 11 and above within the Ibadan Baptist Conference (including visiting PK siblings and fellow PK friends aged 11+).",
     category: 'Eligibility'
   },
   {
     id: 'faq-2',
-    question: 'When is the event taking place?',
-    answer: 'The hangout takes place on Boxing Day — Saturday, December 26, 2026. The official gathering starts at 09:00 AM (GMT+1)',
-    category: 'Date & Time'
+    question: 'What colour should I wear for my Association?',
+    answer: 'Each Conference Association is paired with one of our four hangout colours: Red, Green, White, or Blue. Check the Colour Groups & Associations section above to find your association’s exact colour team. If you are from NBC Quarters or visiting from outside Ibadan without an association, your group colour is Blue.',
+    category: 'Dress Code'
   },
   {
     id: 'faq-3',
+    question: 'When is the event taking place?',
+    answer: 'The hangout takes place on Boxing Day — Saturday, December 26, 2026. The official gathering starts at 09:00 AM (GMT+1).',
+    category: 'Date & Time'
+  },
+  {
+    id: 'faq-4',
     question: 'Where will it take place?',
     answer: 'The event takes place at Baptist House, Ibadan, Oyo State, Nigeria on December 26, 2026.',
     category: 'Location'
   },
   {
-    id: 'faq-4',
+    id: 'faq-5',
     question: 'What should I expect? Will parents or church elders be there?',
-    answer: 'No senior pastoral supervision or preaching. This is strictly a peer-level hangout. Expect great food, board games, breakout circle chats, storytelling, acoustic music, laughter, and an absolute zero-pretense zone. Come in casual, comfortable attire.',
+    answer: 'No senior pastoral supervision or preaching. This is strictly a peer-level hangout for PKs aged 11 and above. Expect great food, board games, breakout circle chats, storytelling, acoustic music, laughter, and an absolute zero-pretense zone. Come comfortably dressed in your Association’s colour.',
     category: 'Format & Atmosphere'
   },
   {
-    id: 'faq-5',
+    id: 'faq-6',
     question: 'How do I register, and is there a fee?',
-    answer: 'Simply fill out the registration form below. Registration is 100% free.',
+    answer: 'Simply click "Count Me In" in the registration section below. Registration is 100% free for all eligible PKs (ages 11+).',
     category: 'Cost & Registration'
   },
   {
-    id: 'faq-6',
+    id: 'faq-7',
     question: 'Can I invite my sibling or another PK friend from another city?',
-    answer: 'Yes! PKs traveling back to Ibadan for the Christmas holidays or visiting siblings are warmly welcome. Just have them registered.',
+    answer: 'Yes! PKs aged 11 and above traveling back to Ibadan for the Christmas holidays or visiting siblings are warmly welcome—and they belong to the Blue group. Just have them registered.',
     category: 'Guests'
+  }
+];
+
+export const ASSOCIATION_GROUPS: AssociationGroup[] = [
+  {
+    id: 'red',
+    groupNumber: 'Group 01',
+    colorName: 'Red',
+    dressHint: 'Wear any shade of red — crimson, ruby, or scarlet',
+    swatchHex: '#ef4444',
+    surfaceTint: 'rgba(239, 68, 68, 0.08)',
+    borderTint: 'rgba(239, 68, 68, 0.28)',
+    textAccent: '#fca5a5',
+    associations: [
+      'Amazing Grace',
+      'Cornerstone',
+      'Fountain of Mercy',
+      'Ibadan East',
+      'Overcomers'
+    ]
+  },
+  {
+    id: 'green',
+    groupNumber: 'Group 02',
+    colorName: 'Green',
+    dressHint: 'Wear any shade of green — emerald, forest, or olive',
+    swatchHex: '#22c55e',
+    surfaceTint: 'rgba(34, 197, 94, 0.08)',
+    borderTint: 'rgba(34, 197, 94, 0.28)',
+    textAccent: '#86efac',
+    associations: [
+      'Champion',
+      'Goshen',
+      'Chosen Generation',
+      'Exceeding Grace',
+      'Livingstone'
+    ]
+  },
+  {
+    id: 'white',
+    groupNumber: 'Group 03',
+    colorName: 'White',
+    dressHint: 'Wear crisp white, cream, or off-white',
+    swatchHex: '#f8fafc',
+    surfaceTint: 'rgba(248, 250, 252, 0.07)',
+    borderTint: 'rgba(248, 250, 252, 0.28)',
+    textAccent: '#f8fafc',
+    associations: [
+      'Emmanuel',
+      'Solid Rock',
+      'Ibadan North',
+      'Christ Love',
+      'Gilgal'
+    ]
+  },
+  {
+    id: 'blue',
+    groupNumber: 'Group 04',
+    colorName: 'Blue',
+    dressHint: 'Wear any shade of blue — royal, navy, or sky blue',
+    swatchHex: '#3b82f6',
+    surfaceTint: 'rgba(59, 130, 246, 0.09)',
+    borderTint: 'rgba(59, 130, 246, 0.30)',
+    textAccent: '#93c5fd',
+    associations: [
+      'Orisun Ayo',
+      'Ibadan Central',
+      'Ona Iye',
+      'Christ Love',
+      'Hephzibah',
+      "NBC Quarters kids or those who aren't IB based and don't have an association"
+    ]
   }
 ];
 

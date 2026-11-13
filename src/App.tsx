@@ -8,6 +8,7 @@ import { CommunitySection } from './components/CommunitySection';
 import { RegistrationForm } from './components/RegistrationForm';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
+import { ColorGroupsSection } from './components/ColorGroupsSection';
 import { AnimatedSection } from './components/AnimatedSection';
 import { Screen, RegistrationData } from './types';
 
@@ -23,6 +24,8 @@ export default function App() {
     const targetElement = document.getElementById(
       screen === 'experience'
         ? 'top'
+        : screen === 'themes'
+        ? 'themes'
         : screen === 'moments'
         ? 'moments'
         : screen === 'faq'
@@ -49,6 +52,7 @@ export default function App() {
         { id: 'register', screen: 'register' },
         { id: 'faq', screen: 'faq' },
         { id: 'moments', screen: 'moments' },
+        { id: 'themes', screen: 'themes' },
         { id: 'top', screen: 'experience' },
       ];
 
@@ -93,7 +97,12 @@ export default function App() {
           <WhyItMatters />
         </AnimatedSection>
 
-        {/* Section 4: Past Editions Archive (Gallery & Lightbox) */}
+        {/* Section 4: Conference Colour Groups & Associations */}
+        <AnimatedSection>
+          <ColorGroupsSection />
+        </AnimatedSection>
+
+        {/* Section 5: Past Editions Archive (Gallery & Lightbox) */}
         <AnimatedSection>
           <MomentsGallery />
         </AnimatedSection>

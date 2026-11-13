@@ -32,10 +32,19 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               Growing up in a pastor's home comes with experiences that don't always make it into the Sunday conversation. This December, come connect, laugh, share, and have the honest conversations that go beyond the church walls.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            {/* Clean unboxed event metadata line */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-sm text-[#e4beb6] font-medium">
+              <span>December 26, 2026</span>
+              <span aria-hidden="true" className="text-[#ab8982]">·</span>
+              <span>Baptist House, Ibadan</span>
+              <span aria-hidden="true" className="text-[#ab8982]">·</span>
+              <span className="text-[#ffb95f] font-semibold">Ages 11 &amp; Above Only</span>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
                 onClick={() => onNavigate('moments')}
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-[#262a35] border border-[#353944]/40 text-[#dfe2f1] font-label-caps text-body-md font-semibold uppercase tracking-wider hover:bg-[#353944] transition-colors cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-[#262a35] border border-[#353944]/40 text-[#dfe2f1] font-label-caps text-body-md font-semibold uppercase tracking-wider hover:bg-[#353944] transition-colors cursor-pointer whitespace-nowrap shrink-0"
               >
                 <span className="material-symbols-outlined text-lg text-[#ffb95f]">photo_camera</span>
                 <span>SEE THE MOMENTS</span>
