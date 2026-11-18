@@ -335,7 +335,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-2',
     question: 'What colour should I wear for my Association?',
-    answer: 'Each Conference Association is paired with one of our four hangout colours: Red, Green, White, or Blue. Check the Colour Groups & Associations section above to find your association’s exact colour team. If you are from NBC Quarters or visiting from outside Ibadan without an association, your group colour is Blue.',
+    answer: 'Each Conference Association is paired with one of our four hangout colours: Red, Green, Purple, or Blue. Check the Colour Groups & Associations section above to find your association’s exact colour team. If you are from NBC Quarters or visiting from outside Ibadan without an association, your group colour is Blue.',
     category: 'Dress Code'
   },
   {
@@ -353,7 +353,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-5',
     question: 'What should I expect? Will parents or church elders be there?',
-    answer: 'No senior pastoral supervision or preaching. This is strictly a peer-level hangout for PKs aged 11 and above. Expect great food, board games, breakout circle chats, storytelling, acoustic music, laughter, and an absolute zero-pretense zone. Come comfortably dressed in your Association’s colour.',
+    answer: 'No senior pastoral supervision or preaching. This is strictly a peer-level hangout for PKs aged 11 and above. Expect board games, breakout circle chats, storytelling, acoustic music, laughter, and an absolute zero-pretense zone. Come comfortably dressed in your Association’s colour.',
     category: 'Format & Atmosphere'
   },
   {
@@ -406,14 +406,14 @@ export const ASSOCIATION_GROUPS: AssociationGroup[] = [
     ]
   },
   {
-    id: 'white',
+    id: 'purple',
     groupNumber: 'Group 03',
-    colorName: 'White',
-    dressHint: 'Wear crisp white, cream, or off-white',
-    swatchHex: '#f8fafc',
-    surfaceTint: 'rgba(248, 250, 252, 0.07)',
-    borderTint: 'rgba(248, 250, 252, 0.28)',
-    textAccent: '#f8fafc',
+    colorName: 'Purple',
+    dressHint: 'Wear any shade of purple — royal, violet, or plum',
+    swatchHex: '#a855f7',
+    surfaceTint: 'rgba(168, 85, 247, 0.10)',
+    borderTint: 'rgba(168, 85, 247, 0.35)',
+    textAccent: '#d8b4fe',
     associations: [
       'Emmanuel',
       'Solid Rock',
@@ -435,7 +435,6 @@ export const ASSOCIATION_GROUPS: AssociationGroup[] = [
       'Orisun Ayo',
       'Ibadan Central',
       'Ona Iye',
-      'Christ Love',
       'Hephzibah',
       "NBC Quarters kids or those who aren't IB based and don't have an association"
     ]

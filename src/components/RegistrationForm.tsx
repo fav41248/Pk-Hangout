@@ -32,7 +32,7 @@ export const RegistrationForm: React.FC = () => {
             Ready to Join the 2026 Edition?
           </h3>
           <p className="text-[#e4beb6] max-w-lg text-body-md leading-relaxed">
-            Click below to secure your spot, reserve your meal pack, and get verified for the Ibadan Baptist Conference Pastors' Kids Hangout.
+            Click below to secure your spot and get verified for the Ibadan Baptist Conference Pastors' Kids Hangout.
           </p>
 
           {/* Clear Age & Venue Eligibility Line */}
