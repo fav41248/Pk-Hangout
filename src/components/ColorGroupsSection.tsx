@@ -115,6 +115,15 @@ export const ColorGroupsSection: React.FC = () => {
             <p className="font-body-lg text-body-lg text-[#e4beb6] mt-3 leading-relaxed">
               Every Association is grouped into one of four signature colours for PK's Hangout 3.0. Find your association below so you know which team colour to rock for the hangout
             </p>
+            <div className="mt-5 rounded-xl bg-[#0f131d] border border-[#ffb95f]/30 px-4 py-3.5 flex items-start gap-3">
+              <span className="material-symbols-outlined text-[#ffb95f] text-xl shrink-0 mt-0.5" aria-hidden="true">
+                volunteer_activism
+              </span>
+              <p className="font-body-md text-sm sm:text-base text-[#dfe2f1] leading-relaxed">
+                <span className="font-semibold text-[#ffb95f]">Colour-Themed Sharing:</span>{' '}
+                Each family is to bring something to share according to the colour assigned to their association.
+              </p>
+            </div>
           </div>
 
           {/* Search Association Input */}
@@ -205,6 +214,11 @@ export const ColorGroupsSection: React.FC = () => {
                     <span className="font-bold" style={{ color: selectedAssociation.group.textAccent }}>
                       {selectedAssociation.group.colorName}
                     </span>
+                    {' '}and bring something{' '}
+                    <span className="font-bold" style={{ color: selectedAssociation.group.textAccent }}>
+                      {selectedAssociation.group.colorName}
+                    </span>
+                    {' '}to share
                   </span>
                 </div>
               </div>

@@ -334,9 +334,9 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: 'faq-2',
-    question: 'What colour should I wear for my Association?',
-    answer: 'Each Conference Association is paired with one of our four hangout colours: Red, Green, Purple, or Blue. Check the Colour Groups & Associations section above to find your association’s exact colour team. If you are from NBC Quarters or visiting from outside Ibadan without an association, your group colour is Blue.',
-    category: 'Dress Code'
+    question: 'What colour should I wear and bring for my Association?',
+    answer: 'Each Conference Association is paired with one of our four hangout colours: Red, Green, Purple, or Blue. Check the Colour Groups section above to find your association’s team colour. Each family is also to bring something to share according to the colour assigned to their association. If you are from NBC Quarters or visiting from outside Ibadan without an association, your group colour is Blue.',
+    category: 'Dress Code & Sharing'
   },
   {
     id: 'faq-3',
@@ -353,7 +353,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-5',
     question: 'What should I expect? Will parents or church elders be there?',
-    answer: 'No senior pastoral supervision or preaching. This is strictly a peer-level hangout for PKs aged 11 and above. Expect board games, breakout circle chats, storytelling, acoustic music, laughter, and an absolute zero-pretense zone. Come comfortably dressed in your Association’s colour.',
+    answer: 'No senior pastoral supervision or preaching. This is strictly a peer-level hangout for PKs aged 11 and above. Expect board games, breakout circle chats, storytelling, acoustic music, laughter, and an absolute zero-pretense zone. Come comfortably dressed in your Association’s colour, and remember that each family is to bring something to share in that same colour.',
     category: 'Format & Atmosphere'
   },
   {
